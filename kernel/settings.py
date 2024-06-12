@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     
     
     'accounts',
+    'category',
+    'carts',
+    'store',
+    'orders',
     'rest_framework',
 ]
 
@@ -78,6 +82,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kernel.wsgi.application'
 
+
+
 AUTH_USER_MODEL = 'accounts.Account'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -85,10 +91,10 @@ AUTH_USER_MODEL = 'accounts.Account'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "Backend",
-        "USER": "Backend_user",
-        "PASSWORD": "sdjnnfejsajad3574nndfkd",
-        "HOST": "127.0.0.1",
+        "NAME": "Backend_new",
+        "USER": "postgres",
+        "PASSWORD": "admin",
+        "HOST": "localhost",
         "PORT": "5432",
         "TEST": {"NAME": "Backend_test"},
     },
@@ -131,6 +137,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
